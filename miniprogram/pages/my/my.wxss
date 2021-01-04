@@ -1,0 +1,87 @@
+/* miniprogram/pages/my/my.wxss */
+.top {
+  width: 750rpx;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  /* border-bottom: 1px rgba(0, 0, 0, 0.1) solid; */
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+.top_left {
+  display: flex;
+}
+
+.headerImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+  margin-left: 20rpx;
+  border: 2rpx rgba(0, 0, 0, 0.1) solid;
+}
+
+.UserInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rpx;
+  justify-content: center;
+}
+
+.integral {
+  color: #837e7e;
+}
+
+.signed {
+  background-color: rgb(125, 209, 125);
+  width: 160rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  margin-right: 10rpx;
+  position: relative;
+}
+
+.text_singed {
+  position: absolute;
+  width: 160rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.question {
+  width: 750rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  /* border-bottom: 1px rgba(0, 0, 0, 0.1) solid; */
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.goquestion {
+  font-size: 30rpx;
+  color: #979090;
+  width: 680rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info {
+  width: 750rpx;
+  display: flex;
+  height: 130rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.infoNum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

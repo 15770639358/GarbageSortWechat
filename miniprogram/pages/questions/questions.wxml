@@ -1,0 +1,35 @@
+<view wx:if = "{{startQuestion && !result}}">
+	<view class="topTime">
+		<van-circle value="{{ value }}" stroke-width="6" text="{{value/10}}" clockwise="{{ false }}" size="80" speed= "0" />
+	</view>
+
+	<view class="question">
+		{{showQuestion.name}}是什么垃圾 ?
+	</view>
+
+	<view class="answers">
+		<view class="answer" style=" background-color: green;" data-sort="1" bindtap="answer">可回收垃圾</view>
+		<view class="answer" style=" background-color: red;" data-sort="2" bindtap="answer">有害垃圾</view>
+		<view class="answer" style=" background-color: brown;" data-sort="3" bindtap="answer">湿垃圾</view>
+		<view class="answer" style=" background-color: #cacaca;" data-sort="4" bindtap="answer">干垃圾</view>
+	</view>
+</view>
+
+<view wx:if = "{{!startQuestion && !result}}" bindtap="start" class="startAnswer">开始答题
+  <view style="width: 500rpx;margin-left:50rpx;">一天有一次答题机会！每正确回答一道，可得2积分！每题的回答时间为10秒</view>
+</view>
+
+<view class="cu-modal" wx:if = "{{isShow}}" bindtap="nextQuestion" animation="{{animation}}">
+	<view class="cu-dialog">
+		<image class="bg-img" src="{{logo}}" animation="{{animation}}"></image>
+	</view>
+</view>
+
+<view class = "result" wx:if = "{{result}}">
+  <view class = "totalQuestion">共答{{answerQuestion.length}}题</view>
+  <view class="crrQuestion">正确{{correctQuestion.length}}题</view>
+  <view class = "inter">获取{{correctQuestion.length * 2}}积分</view>
+</view>
+
+
+<van-toast id="van-toast" />

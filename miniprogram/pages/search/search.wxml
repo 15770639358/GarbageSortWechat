@@ -1,0 +1,33 @@
+<view class="cu-bar bg-darkGray search">
+	<view class=" search-form  round " bindtap="goSearch">
+		<text class="cuIcon-search text-green"></text>
+		<input type="text" placeholder="输入垃圾名称" confirm-type="search" focus="{{true}}" bindconfirm="searchIcon" style="color: #000;" class='input'></input>
+	</view>
+</view>
+
+
+
+<view style="margin-top: 90rpx;">
+	<view class="filter-view" wx:for="{{datas}}" wx:key bindtap="onItemClick" data-index="{{item.sortId}}" wx:key='index'>
+		<view class="item-view item-o bg-white" wx:if="{{index%2==0}}">
+			<image wx:if="{{item.sortId==1}}" class="img" src='../../resource/images/RecycleableWaste.jpg'></image>
+			<image wx:elif="{{item.sortId==2}}" class="img" src='../../resource/images/HazardouAwaste.jpg'></image>
+			<image wx:elif="{{item.sortId==3}}" class="img" src='../../resource/images/HouseholdfoodWaste.jpg'></image>
+			<image wx:else="{{item.sortId==4}}" class="img" src='../../resource/images/ResidualWaste.png'></image>
+			<text  >{{item.name}}</text>
+		</view>
+		<view class="item-view item-ji bg-grey" wx:else>
+			<image wx:if="{{item.sortId==1}}" class="img" src='../../resource/images/RecycleableWaste.jpg'></image>
+			<image wx:elif="{{item.sortId==2}}" class="img" src='../../resource/images/HazardouAwaste.jpg'></image>
+			<image wx:elif="{{item.sortId==3}}" class="img" src='../../resource/images/HouseholdfoodWaste.jpg'></image>
+			<image wx:else="{{item.sortId==4}}" class="img" src='../../resource/images/ResidualWaste.png'></image>
+			<text  >{{item.name}}</text>
+		</view>
+	</view>
+</view>
+
+<view class="cu-modal" wx:if = "{{isShow}}" bindtap="hideModal" animation="{{animation}}">
+	<view class="cu-dialog">
+		<image class="bg-img" src="{{logo}}" animation="{{animation}}" bindtap="goResult"></image>
+	</view>
+</view>

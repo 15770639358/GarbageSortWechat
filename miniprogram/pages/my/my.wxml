@@ -1,0 +1,45 @@
+<!--miniprogram/pages/my/my.wxml-->
+<view style="height: 100vh;" wx:if="{{isLogin}}">
+	<view class='top'>
+		<view class="top_left">
+			<view class='headerImg'>
+				<!-- <image src="{{headerImg}}" style="width: 100rpx;" mode="widthFix"></image> -->
+				<van-image round width="100rpx" height="100rpx" src="{{headerImg}}" use-loading-slot>
+					<image slot="loading" src="../../resource/images/header.svg" style="width: 100rpx;" mode="widthFix"></image>
+				</van-image>
+			</view>
+
+			<view class="UserInfo">
+				<view class="nickName">
+					用户名: {{nickName}}
+				</view>
+				<view class='integral'>
+					积分: {{integralInfo.nowIntegral}}
+				</view>
+			</view>
+		</view>
+
+		<view>
+			<view class="signed" wx:if="{{todayIsSigned}}">已签到</view>
+			<view class="signed" wx:else bindtap="singed">签到</view>
+			<view class="text_singed">积分 +2</view>
+		</view>
+	</view>
+	<view class="question">
+		<view class="goquestion" bindtap="geQuestion">
+			<view>去答题</view>
+			<view>></view>
+		</view>
+		<view class="info">
+			<view class = "infoNum">
+				<view>以刷题</view>
+				<view style="margin-top:10rpx;color:green;">{{allQuestion}}</view>
+			</view>
+			<view class = "infoNum">
+				<view>正确率</view>
+				<view style="margin-top:10rpx;color:green;">{{correct}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:else>授权登录</button>

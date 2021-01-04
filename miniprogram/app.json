@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/camera/camera",
+    "pages/result/result",
+    "pages/resultDetalis/resultDetalis",
+    "pages/noResultCommit/noResultCommit",
+    "pages/my/my",
+    "pages/questions/questions"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00cc77",
+    "navigationBarTitleText": "智能垃圾分类",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "识别",
+        "iconPath": "resource/images/icon_ai_default.png",
+        "selectedIconPath": "resource/images/icon_ai.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "resource/images/icon_sort_default.png",
+        "selectedIconPath": "resource/images/icon_sort.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,97 @@
+/* miniprogram/pages/questions/questions.wxss */
+.topTime {
+  width: 750rpx;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  width: 700rpx;
+  height: 10vh;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  font-size: 50rpx;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.answers {
+  margin-top: 5vh;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.answer {
+  width: 650rpx;
+  height: 6vh;
+  border-radius: 3vh;
+  text-align: center;
+  line-height: 6vh;
+}
+
+
+.bg-img{
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.cu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 750rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: 1000;
+}
+
+.cu-dialog {
+  width: 300rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 50%;
+  left: 225rpx;
+  transform: translateY(-50%);
+}
+
+.result {
+  width: 750rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totalQuestion {
+  font-size: 60rpx;
+  font-weight: bolder;
+  margin-top: 10vh;
+}
+
+.crrQuestion {
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-top: 5vh;
+}
+
+.inter {
+  font-size: 30rpx;
+  margin-top: 3vh;
+}
+
+.startAnswer {
+  width: 600rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: green;
+  margin-left: 75rpx;
+  margin-top: 30vh;
+  text-align: center;
+  line-height: 100rpx;
+}
